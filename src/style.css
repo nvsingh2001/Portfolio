@@ -1,42 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Cursor */
+/* Cursor / Typewriter */
 .cursor {
   position: relative;
-  width: 24em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 30px;
+  max-width: 100%;
+  width: min(900px, 90%);
+  margin: 0 auto 1rem auto;
+  font-size: 2rem;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
+  white-space: normal; /* allow natural wrapping; JS reveal handles sequencing */
+  overflow: visible;
+  display: inline-block; /* keep text inline so characters don't stack vertically */
+  word-break: normal;
+  letter-spacing: 0.01em;
 }
-/* Animation */
+/* Typewriter removed: heading displays as plain text. */
 .typewriter-animation {
-  animation: typewriter 5s steps(60) 1s 1 normal both,
-    blinkingCursor 500ms steps(50) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 60%;
-  }
-}
-@keyframes blinkingCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
+  animation: none !important;
 }
 
 /* Introduction */
 .introduction {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 /* Container */
@@ -45,8 +31,11 @@
 }
 
 #profile-picture {
-  width: 75%;
-  object-fit: contain;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 /* Compact theme dropdown in navbar */
@@ -130,6 +119,27 @@
   margin-right: auto;
 }
 
+/* Small screens adjustments */
+@media (max-width: 768px) {
+  .cursor {
+    font-size: 1.5rem;
+    border-right-width: 1.5px;
+    white-space: normal; /* allow wrapping on very small widths */
+  }
+  .typewriter-animation {
+    animation-duration: 3.5s;
+  }
+  .introduction {
+    font-size: 1rem;
+  }
+  #profile-picture {
+    max-width: 220px;
+  }
+  .navbar .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .language-icon {
     width: 36px;
@@ -137,6 +147,26 @@
   }
   .card-text .col {
     margin-bottom: 1rem;
+  }
+  .cursor {
+    font-size: 1.15rem;
+    white-space: normal;
+    width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding-left: 0.25rem;
+  }
+  .introduction {
+    font-size: 0.98rem;
+  }
+  .container.p-5 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .navbar .navbar-toggler {
+    margin-right: 0.5rem;
   }
 }
 a {
@@ -150,3 +180,5 @@ a {
 a:hover {
   color: #5a2bff !important;
 }
+
+/* caret removed */

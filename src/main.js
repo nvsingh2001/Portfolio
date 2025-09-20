@@ -76,6 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (current === "auto") applyTheme("auto");
       });
   }
+
+  // JS-driven typewriter reveal (accessible + responsive)
+  // Removed typewriter effect: heading is now static text.
 });
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
