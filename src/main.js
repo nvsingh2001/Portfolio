@@ -104,7 +104,7 @@ const sections = [
 const observerOptions = {
   root: null, // use the viewport
   rootMargin: "0px",
-  threshold: 0.4, // 10% of the element is visible
+  threshold: 0.7, // 10% of the element is visible
 };
 
 const observer = new IntersectionObserver((entries) => {
