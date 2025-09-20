@@ -205,11 +205,7 @@ a:hover {
   transform: rotate(-45deg) translateY(100%);
 }
 
-.holographic-card:touch {
+.hovered {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-}
-.holographic-card:touch::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
 }

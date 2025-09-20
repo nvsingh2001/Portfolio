@@ -135,3 +135,8 @@ const languageIcon = document.querySelectorAll(".language-icon");
 languageIcon.forEach((icon) => {
   icon.classList.add("img-thumbnail");
 });
+
+document.querySelectorAll(".holographic-card").forEach((el) => {
+  el.addEventListener("touchstart", () => el.classList.add("hovered"));
+  el.addEventListener("touchend", () => el.classList.remove("hovered"));
+});
