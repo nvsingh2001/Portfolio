@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naman Vinay Singh-Portfolio</title>
+  </head>
+  <body>
+    <!-- Inline SVG sprite for theme icons (small subset of Bootstrap Icons) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+        <path
+          d="M8 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 0zM8 13.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM16 8a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1A.5.5 0 0 1 16 8zM2.5 8a.5.5 0 0 1-.5.5H1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5zM12.657 3.343a.5.5 0 0 1 .707 0l.707.707a.5.5 0 0 1-.707.707l-.707-.707a.5.5 0 0 1 0-.707zM3.636 12.364a.5.5 0 0 1 .707 0l.707.707a.5.5 0 1 1-.707.707l-.707-.707a.5.5 0 0 1 0-.707zM12.657 12.657a.5.5 0 0 1 0 .707l-.707.707a.5.5 0 1 1-.707-.707l.707-.707a.5.5 0 0 1 .707 0zM3.636 3.636a.5.5 0 0 1 0 .707L2.93 5.05a.5.5 0 1 1-.707-.707l.707-.707a.5.5 0 0 1 .707 0z"
+        />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.5.5 0 0 1 .606-.375A7 7 0 1 0 15 8a.5.5 0 0 1-.375.606A6 6 0 1 1 6 .278z"
+        />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1v14z" />
+      </symbol>
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.485 1.929a.75.75 0 0 1 1.06 1.06L6.56 11.974l-3.09-3.09a.75.75 0 1 1 1.06-1.06l2.03 2.03 7.925-7.925z"
+        />
+      </symbol>
+    </svg>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Naman Vinay Singh</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#certifications">Certifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-primary" href="#">Resume</a>
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme"
+                >
+                  <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+                    <use href="#moon-stars-fill"></use>
+                  </svg>
+                  <span class="d-lg-none ms-2" id="bd-theme-text"
+                    >Toggle theme</span
+                  >
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="bd-theme"
+                >
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#sun-fill"></use>
+                      </svg>
+                      Light
+                      <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center active"
+                      data-bs-theme-value="dark"
+                      aria-pressed="true"
+                    >
+                      <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#moon-stars-fill"></use>
+                      </svg>
+                      Dark
+                      <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="auto"
+                      aria-pressed="false"
+                    >
+                      <svg class="bi me-2 opacity-50" aria-hidden="true">
+                        <use href="#circle-half"></use>
+                      </svg>
+                      Auto
+                      <svg class="bi ms-auto d-none" aria-hidden="true">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="pt-5">
+      <div class="container p-5" id="about">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="cursor typewriter-animation">Full Stack Developer</p>
+            <p class="introduction">
+              Hi, i’m naman vinay singh — a full-stack java web developer with a
+              passion for building scalable, efficient, and user-friendly
+              applications.
+              <br /><br />
+              I specialize in java and modern web technologies, with experience
+              across the entire development lifecycle — from designing robust
+              back-end systems and crafting clean apis, to building responsive
+              front-end interfaces that deliver great user experiences.
+              <br /><br />
+              My work reflects a balance of strong problem-solving skills, clean
+              code practices, and a constant drive to learn and adapt to new
+              technologies. whether it’s architecting enterprise-level
+              applications, developing intuitive web platforms, or exploring
+              innovative software solutions, i thrive on turning ideas into
+              reality through code.
+            </p>
+          </div>
+          <div class="col-md-6 h-50">
+            <div class="container d-flex justify-content-center">
+              <img
+                src="/asset/profile_picture2.png"
+                alt="profile picture"
+                id="profile-picture"
+              />
+            </div>
+            <div class="container d-flex justify-content-center mt-2">
+              <ul class="list-unstyled">
+                <li class="mb-2 d-inline-block">
+                  <a href="mailto:namanvinaysingh24@gmail.com"
+                    ><i class="bi bi-envelope"></i
+                  ></a>
+                </li>
+                <li class="mb-2 d-inline-block">
+                  <a href="https://www.linkedin.com/in/naman-vinay-singh/"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </li>
+                <li class="mb-2 d-inline-block">
+                  <a href="https://github.com/nvsingh2001"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="experience">
+        <h1 class="display-2 text-center">Work Experience</h1>
+        <div class="card border-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Python Developer Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Techplement, Remote</h6>
+            <p class="card-text mb-2">Feb 2025 - Mar 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="projects">
+        <div class="row my-2">
+          <h1 class="display-2 text-center">Projects</h1>
+        </div>
+        <div class="row mb-4">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">Quizzy</h5>
+                <div class="card-text">
+                  <ul>
+                    <li>
+                      A quiz app to test your knowledge of HTML, CSS, and
+                      JavaScript.
+                    </li>
+                    <li>Technologies: HTML, CSS, Bootstrap, JavaScript.</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://github.com/nvsingh2001/Quizzy"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  ><i class="bi bi-github"></i> github</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">TODO Application</h5>
+                <div class="card-text">
+                  <ul>
+                    <li>
+                      A command-line Todo application built with Java and
+                      SQLite.
+                    </li>
+                    <li>Technologies: Java, SQLite.</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://github.com/nvsingh2001/TODO-Application"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  ><i class="bi bi-github"></i> github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">Fraud Detection System</h5>
+                <div class="card-text">
+                  <ul>
+                    <li>
+                      The Fraud Detection System provides a framework for
+                      identifying fraudulent transactions using supervised
+                      learning.
+                    </li>
+                    <li>
+                      Technologies: Python, Scikit-learn, Ensemble Learning
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="https://github.com/nvsingh2001/fraud-detection-system"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  ><i class="bi bi-github"></i> github</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">Book Search engine</h5>
+                <div class="card-text">
+                  <ul>
+                    <li>
+                      The Book Search Web App is a Flask application designed to
+                      help users search through a collection of books using an
+                      inverted index and a basic search engine.
+                    </li>
+                    <li>Technologies: HTML, CSS, Python, Flask, NLP</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://github.com/nvsingh2001/Book-Search-engine"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  ><i class="bi bi-github"></i> github</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="skills">
+        <div class="row my-3">
+          <h1 class="display-2 text-center">Skills</h1>
+        </div>
+        <div class="row my-3">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Programming Languages</div>
+              <div class="card-body text-primary">
+                <div
+                  class="card-text row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 justify-content-center align-items-center"
+                >
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/java.svg"
+                        alt="java"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Java</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/python.svg"
+                        alt="python"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Python</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/javascript.svg"
+                        alt="javascript"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">JavaScript</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/cpp.svg"
+                        alt="cpp"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">C++</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/sql.png"
+                        alt="sql"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">SQL</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Frontend Technologies</div>
+              <div class="card-body text-primary">
+                <div
+                  class="card-text row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 justify-content-center align-items-center"
+                >
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/html.png"
+                        alt="html"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">HTML</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/css.png"
+                        alt="css"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">CSS</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/bootstrap.png"
+                        alt="bootstrap"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Bootstrap</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/react.png"
+                        alt="react"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">React.js</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/vite.svg"
+                        alt="vite"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Vite</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Backend Technologies</div>
+              <div class="card-body text-primary">
+                <div
+                  class="card-text row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 justify-content-center align-items-center"
+                >
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/springBoot.png"
+                        alt="Spring Boot"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Spring Boot</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/mysql.svg"
+                        alt="mysql"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Mysql</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/postgressql.svg"
+                        alt="postgressql"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">PostgreSql</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/mongoDB.png"
+                        alt="mongodb"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">MongoDB</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/Hibernate.svg"
+                        alt="Hibernate"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Hibernate</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Developer Tools</div>
+              <div class="card-body text-primary">
+                <div
+                  class="card-text row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 justify-content-center align-items-center"
+                >
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/Git.svg"
+                        alt="Git"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Git</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/GitHub.png"
+                        alt="GitHub"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">GitHub</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/VSCode.svg"
+                        alt="VSCode"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">VSCode</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/IntelliJ_IDEA.svg"
+                        alt="Intellij Idea"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Intellij Idea</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/Vim.svg"
+                        alt="Vim"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Vim</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/Postman.svg"
+                        alt="PostMan"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">PostMan</figcaption>
+                    </figure>
+                  </div>
+                  <div class="col d-flex flex-column align-items-center">
+                    <figure class="mb-1">
+                      <img
+                        src="/asset/Linux.svg"
+                        alt="Linux"
+                        class="language-icon mb-2"
+                      />
+                      <figcaption class="text-center">Linux</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="education">
+        <h1 class="display-2 text-center">Education</h1>
+        <div class="card border-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              Bachelors of Engineering in Computer Science Engineering
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Chandigarh University, Mohali, Punjab
+            </h6>
+            <p class="card-text">Aug 2021 - June 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="certifications">
+        <div class="row my-3">
+          <h1 class="display-2 text-center">Certifications</h1>
+        </div>
+        <div class="row my-3 p-1">
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  NoSQL, Big Data, and Spark Foundations
+                </h5>
+                <p class="card-text">
+                  Issued by: IBM (via Coursera, IBM Skills Network)
+                </p>
+              </div>
+              <div class="d-flex justify-content-center py-2">
+                <a
+                  href="https://www.coursera.org/account/accomplishments/specialization/AD2GHPHHQXWM"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Principles of UX/UI Design</h5>
+                <br />
+                <p class="card-text mb-4">Issued by: Meta (via Coursera)</p>
+              </div>
+              <div class="d-flex justify-content-center py-2">
+                <a
+                  href="https://www.coursera.org/account/accomplishments/certificate/L7K97JLBL3NE"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card border-primary mb-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Deep Learning and Reinforcement Learning
+                </h5>
+                <p class="card-text">
+                  Issued by: IBM (via Coursera, IBM Skills Network)
+                </p>
+              </div>
+              <div class="d-flex justify-content-center py-2">
+                <a
+                  href="https://www.coursera.org/account/accomplishments/certificate/BV4S3T4BQGKV"
+                  class="btn border-primary text-primary"
+                  target="_blank"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container p-5" id="contact">
+        <div class="row my-3">
+          <h1 class="display-2 text-center">Contact Me</h1>
+        </div>
+        <div class="row my-3 p-1">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary h-100">
+              <div class="card-body">
+                <h5 class="card-title">Get in Touch</h5>
+                <div class="card-subtitle mb-3 text-muted">
+                  Feel free to contact me for any work or suggestions below.
+                </div>
+                <div class="card-text text-primary mb-lg-5">
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <i class="bi bi-envelope"></i
+                      ><a
+                        href="mailto:namanvinaysingh24@gmail.com"
+                        class="text-decoration-none"
+                      >
+                        namanvinaysingh24@gmail.com</a
+                      >
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-linkedin"></i>
+                      <a
+                        href="https://www.linkedin.com/in/naman-vinay-singh/"
+                        class="text-decoration-none"
+                      >
+                        linkedin.com/in/naman-vinay-singh</a
+                      >
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-github"></i>
+                      <a
+                        href="https://github.com/nvsingh2001"
+                        class="text-decoration-none"
+                      >
+                        github.com/nvsingh2001</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">Send a Message</h5>
+                <div class="card-text">
+                  <form>
+                    <div class="mb-3 form-floating">
+                      <input
+                        type="text"
+                        class="form-control border-primary"
+                        id="name"
+                        placeholder="Name"
+                      />
+                      <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                      <input
+                        type="email"
+                        class="form-control border-primary"
+                        id="email"
+                        placeholder="Email address"
+                      />
+                      <label for="email" class="form-label"
+                        >Email address</label
+                      >
+                    </div>
+                    <div class="mb-3 form-floating">
+                      <textarea
+                        class="form-control border-primary"
+                        id="message"
+                        placeholder="Message"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="message" class="form-label">Message</label>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                      <button
+                        type="submit"
+                        class="btn border-primary text-primary w-100"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-black">
+      <div class="container p-3 pt-0">
+        <div class="row">
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card my-3 border-0">
+              <div class="card-body bg-black">
+                <h5 class="card-title">Naman Vinay Singh</h5>
+                <p class="card-text">
+                  Versatile Full Stack Developer focused on crafting
+                  user-friendly, robust, and high-performance software.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card my-3 border-0">
+              <div class="card-body bg-black">
+                <h5 class="card-title text-center">Links</h5>
+                <div class="card-text d-flex offset-1 justify-content-center">
+                  <ul class="list-unstyled">
+                    <li class="mb-lg-1"><a href="#about">About</a></li>
+                    <li class="mb-lg-1">
+                      <a href="#experience">Experience</a>
+                    </li>
+                    <li class="mb-lg-1"><a href="#projects">Projects</a></li>
+                    <li class="mb-lg-1"><a href="#skills">Skills</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="card my-3 border-0">
+              <div class="card-body bg-black">
+                <h5 class="card-title text-center">Connect</h5>
+                <div
+                  class="card-text d-flex align-content-center justify-content-center"
+                >
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="mailto:namanvinaysingh24@gmail.com"
+                        ><i class="bi bi-envelope"></i
+                      ></a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="https://www.linkedin.com/in/naman-vinay-singh/"
+                        ><i class="bi bi-linkedin"></i
+                      ></a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="https://github.com/nvsingh2001"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-muted">
+            &copy;<span id="year"></span> Naman Vinay Singh. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

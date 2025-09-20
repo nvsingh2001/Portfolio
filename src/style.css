@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor {
+  position: relative;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+/* Animation */
+.typewriter-animation {
+  animation: typewriter 5s steps(60) 1s 1 normal both,
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Introduction */
+.introduction {
+  font-size: 1.2rem;
+}
+
+/* Container */
+.container-rounded {
+  border-radius: 1rem;
+}
+
+#profile-picture {
+  width: 75%;
+  object-fit: contain;
+}
+
+/* Compact theme dropdown in navbar */
+.dropdown-menu.dropdown-menu-end {
+  min-width: 10rem; /* avoid very wide menu */
+  max-width: 18rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.dropdown-menu .dropdown-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.dropdown-menu .dropdown-item .bi.ms-auto {
+  margin-left: 0.5rem;
+}
+
+/* Strong override for navbar theme dropdown to keep it compact */
+.nav-item.dropdown > .dropdown-menu {
+  width: 11.5rem !important;
+  max-width: 11.5rem !important;
+  min-width: 9.5rem !important;
+  border-radius: 0.5rem;
+}
+.nav-item.dropdown .dropdown-item {
+  padding-top: 0.45rem !important;
+  padding-bottom: 0.45rem !important;
+  padding-left: 0.6rem !important;
+  padding-right: 0.4rem !important;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.nav-item.dropdown .dropdown-item svg.bi.me-2 {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.5rem;
+}
+.nav-item.dropdown .dropdown-item .bi.ms-auto {
+  margin-left: auto;
+  width: 1rem;
+  height: 1rem;
+}
+.nav-item.dropdown .dropdown-item.active {
+  background: rgba(90, 43, 255, 0.18);
+}
+
+/* Shrink the navbar theme toggle to match other nav items */
+.nav-item.dropdown > button#bd-theme,
+.nav-item.dropdown > a#bd-theme {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  line-height: 1;
+}
+.nav-item.dropdown > button#bd-theme .theme-icon-active,
+.nav-item.dropdown > a#bd-theme .theme-icon-active {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+}
+.nav-item.dropdown > button#bd-theme svg.theme-icon-active use {
+  /* ensure the svg scales down */
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.nav-item.dropdown .dropdown-toggle::after {
+  margin-left: 0.25rem; /* keep the caret aligned */
+}
+
+.language-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 576px) {
+  .language-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .card-text .col {
+    margin-bottom: 1rem;
+  }
+}
+a {
+  text-decoration: none !important;
+}
+
+.active {
+  color: #5a2bff !important;
+}
+
+a:hover {
+  color: #5a2bff !important;
+}
