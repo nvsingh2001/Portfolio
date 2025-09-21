@@ -643,12 +643,13 @@
               <div class="card-body">
                 <h2 class="card-title">Send a Message</h2>
                 <div class="card-text">
-                  <form name="contact-form" netlify>
+                  <form name="contact-form" method="post" netlify>
                     <div class="mb-3 form-floating">
                       <input
                         type="text"
                         class="form-control box"
                         id="name"
+                        name="name"
                         placeholder="Name"
                       />
                       <label for="name" class="form-label">Name</label>
@@ -658,6 +659,7 @@
                         type="email"
                         class="form-control box"
                         id="email"
+                        name="email"
                         placeholder="Email address"
                       />
                       <label for="email" class="form-label"
@@ -669,6 +671,7 @@
                         class="form-control box"
                         id="message"
                         placeholder="Message"
+                        name="message"
                         style="height: 100px"
                       ></textarea>
                       <label for="message" class="form-label">Message</label>
