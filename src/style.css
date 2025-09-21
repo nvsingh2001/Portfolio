@@ -199,7 +199,7 @@ a:hover {
 }
 
 .city-night-light {
-  font-weight: 300;
+  font-weight: bold !important;
   animation: lights 5s 750ms linear infinite;
 }
 
@@ -222,4 +222,9 @@ a:hover {
   100% {
     background-position: 100% 50%;
   }
+}
+
+.badge {
+  font-size: 1.1rem !important;
+  color: whitesmoke !important;
 }

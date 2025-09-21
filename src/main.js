@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./background.css";
 import "./border.css";
+import "./neons.scss";
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
