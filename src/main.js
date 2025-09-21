@@ -2,6 +2,8 @@ import "./style.css";
 import "./buttonHover.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "animate.css";
+import "./background.css";
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
