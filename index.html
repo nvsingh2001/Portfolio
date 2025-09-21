@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -11,28 +11,6 @@
     <title>Naman Vinay Singh-Portfolio</title>
   </head>
   <body>
-    <!-- Inline SVG sprite for theme icons (small subset of Bootstrap Icons) -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
-        <path
-          d="M8 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 0zM8 13.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM16 8a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1A.5.5 0 0 1 16 8zM2.5 8a.5.5 0 0 1-.5.5H1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5zM12.657 3.343a.5.5 0 0 1 .707 0l.707.707a.5.5 0 0 1-.707.707l-.707-.707a.5.5 0 0 1 0-.707zM3.636 12.364a.5.5 0 0 1 .707 0l.707.707a.5.5 0 1 1-.707.707l-.707-.707a.5.5 0 0 1 0-.707zM12.657 12.657a.5.5 0 0 1 0 .707l-.707.707a.5.5 0 1 1-.707-.707l.707-.707a.5.5 0 0 1 .707 0zM3.636 3.636a.5.5 0 0 1 0 .707L2.93 5.05a.5.5 0 1 1-.707-.707l.707-.707a.5.5 0 0 1 .707 0z"
-        />
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path
-          d="M6 .278a.5.5 0 0 1 .606-.375A7 7 0 1 0 15 8a.5.5 0 0 1-.375.606A6 6 0 1 1 6 .278z"
-        />
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 1 8 1v14z" />
-      </symbol>
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path
-          d="M13.485 1.929a.75.75 0 0 1 1.06 1.06L6.56 11.974l-3.09-3.09a.75.75 0 1 1 1.06-1.06l2.03 2.03 7.925-7.925z"
-        />
-      </symbol>
-    </svg>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
@@ -74,77 +52,7 @@
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-outline-primary" href="#">Resume</a>
-              </li>
-              <li class="nav-item dropdown">
-                <button
-                  class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center"
-                  id="bd-theme"
-                  type="button"
-                  aria-expanded="false"
-                  data-bs-toggle="dropdown"
-                  aria-label="Toggle theme"
-                >
-                  <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-                    <use href="#moon-stars-fill"></use>
-                  </svg>
-                  <span class="d-lg-none ms-2" id="bd-theme-text"
-                    >Toggle theme</span
-                  >
-                </button>
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="bd-theme"
-                >
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center"
-                      data-bs-theme-value="light"
-                      aria-pressed="false"
-                    >
-                      <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#sun-fill"></use>
-                      </svg>
-                      Light
-                      <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                      </svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center active"
-                      data-bs-theme-value="dark"
-                      aria-pressed="true"
-                    >
-                      <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#moon-stars-fill"></use>
-                      </svg>
-                      Dark
-                      <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                      </svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center"
-                      data-bs-theme-value="auto"
-                      aria-pressed="false"
-                    >
-                      <svg class="bi me-2 opacity-50" aria-hidden="true">
-                        <use href="#circle-half"></use>
-                      </svg>
-                      Auto
-                      <svg class="bi ms-auto d-none" aria-hidden="true">
-                        <use href="#check2"></use>
-                      </svg>
-                    </button>
-                  </li>
-                </ul>
+                <a class="btn" href="#">Resume</a>
               </li>
             </ul>
           </div>
@@ -155,7 +63,7 @@
       <div class="container p-5" id="about">
         <div class="row">
           <div class="col-md-6">
-            <h1>Full Stack Developer</h1>
+            <h1 class="neon-text">Full Stack Developer</h1>
             <p class="introduction">
               Hi, I’m Naman Vinay Singh — a full-stack java web developer with a
               passion for building scalable, efficient, and user-friendly
@@ -236,7 +144,7 @@
                 </div>
                 <a
                   href="https://github.com/nvsingh2001/Quizzy"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   ><i class="bi bi-github"></i> github</a
                 >
@@ -258,7 +166,7 @@
                 </div>
                 <a
                   href="https://github.com/nvsingh2001/TODO-Application"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   ><i class="bi bi-github"></i> github</a
                 >
@@ -308,7 +216,7 @@
                 </div>
                 <a
                   href="https://github.com/nvsingh2001/Book-Search-engine"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   ><i class="bi bi-github"></i> github</a
                 >
@@ -622,7 +530,7 @@
               <div class="d-flex justify-content-center py-2">
                 <a
                   href="https://www.coursera.org/account/accomplishments/specialization/AD2GHPHHQXWM"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   >View Certificate</a
                 >
@@ -639,7 +547,7 @@
               <div class="d-flex justify-content-center py-2">
                 <a
                   href="https://www.coursera.org/account/accomplishments/certificate/L7K97JLBL3NE"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   >View Certificate</a
                 >
@@ -659,7 +567,7 @@
               <div class="d-flex justify-content-center py-2">
                 <a
                   href="https://www.coursera.org/account/accomplishments/certificate/BV4S3T4BQGKV"
-                  class="btn border-primary text-primary"
+                  class="btn text-primary"
                   target="_blank"
                   >View Certificate</a
                 >
@@ -752,10 +660,7 @@
                       <label for="message" class="form-label">Message</label>
                     </div>
                     <div class="d-flex justify-content-center mb-3">
-                      <button
-                        type="submit"
-                        class="btn border-primary text-primary w-100"
-                      >
+                      <button type="submit" class="btn text-primary w-100">
                         Submit
                       </button>
                     </div>

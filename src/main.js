@@ -1,85 +1,7 @@
 import "./style.css";
+import "./buttonHover.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
-// Robust theme toggler: waits for DOM, updates navbar icon/aria, supports auto
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
-  const themeButtons = Array.from(
-    document.querySelectorAll("[data-bs-theme-value]")
-  );
-  const toggleBtn = document.getElementById("bd-theme");
-  const toggleIconUse = toggleBtn && toggleBtn.querySelector("use");
-
-  function setIconForTheme(theme) {
-    // chooses icon id used in the <use href="#..."> inside the toggle button
-    if (!toggleIconUse) return;
-    const mapping = {
-      light: "#sun-fill",
-      dark: "#moon-stars-fill",
-      auto:
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "#moon-stars-fill"
-          : "#sun-fill",
-    };
-    toggleIconUse.setAttribute("href", mapping[theme] || "#circle-half");
-    // update aria-label to reflect current theme
-    toggleBtn.setAttribute("aria-label", `Toggle theme (${theme})`);
-  }
-
-  function updateActive(theme) {
-    themeButtons.forEach((btn) => {
-      const val = btn.getAttribute("data-bs-theme-value");
-      const check = btn.querySelector(".bi.ms-auto");
-      if (val === theme) {
-        btn.classList.add("active");
-        btn.setAttribute("aria-pressed", "true");
-        if (check) check.classList.remove("d-none");
-      } else {
-        btn.classList.remove("active");
-        btn.setAttribute("aria-pressed", "false");
-        if (check) check.classList.add("d-none");
-      }
-    });
-  }
-
-  function applyTheme(theme) {
-    if (theme === "auto") {
-      root.removeAttribute("data-bs-theme");
-    } else {
-      root.setAttribute("data-bs-theme", theme);
-    }
-    setIconForTheme(theme);
-    updateActive(theme);
-  }
-
-  // read saved preference
-  const saved = localStorage.getItem("theme") || "auto";
-  applyTheme(saved);
-
-  // listen for clicks on menu items
-  themeButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const val = btn.getAttribute("data-bs-theme-value");
-      localStorage.setItem("theme", val);
-      applyTheme(val);
-    });
-  });
-
-  // if auto, listen to system changesj
-  if (window.matchMedia) {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    mq.addEventListener &&
-      mq.addEventListener("change", (e) => {
-        const current = localStorage.getItem("theme") || "auto";
-        if (current === "auto") applyTheme("auto");
-      });
-  }
-
-  // JS-driven typewriter reveal (accessible + responsive)
-  // Removed typewriter effect: heading is now static text.
-});
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
@@ -139,4 +61,8 @@ languageIcon.forEach((icon) => {
 document.querySelectorAll(".holographic-card").forEach((el) => {
   el.addEventListener("touchstart", () => el.classList.add("hovered"));
   el.addEventListener("touchend", () => el.classList.remove("hovered"));
+});
+
+document.querySelectorAll(".btn").forEach((element) => {
+  element.classList.add("glow-on-hover");
 });
