@@ -1,10 +1,16 @@
-/* main {
-  background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
-} */
 /* Introduction */
 .introduction {
   font-size: 1.125rem;
   line-height: 1.6;
+}
+
+.navbar {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.card {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border-radius: 15px !important;
 }
 
 /* Container */
@@ -17,6 +23,7 @@
   height: auto;
   object-fit: cover;
   border-radius: 0.5rem;
+  max-width: 100%;
 }
 
 .language-icon {
@@ -74,6 +81,10 @@
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
+  .gradient-border.circle img {
+    width: 140px;
+    height: 140px;
+  }
   .navbar .navbar-toggler {
     margin-right: 0.5rem;
   }
@@ -88,6 +99,13 @@ a {
 
 a:hover {
   color: #5a2bff !important;
+}
+
+.card-header {
+  color: #0ff !important;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .holographic-card {

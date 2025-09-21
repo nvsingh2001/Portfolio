@@ -2,8 +2,8 @@ import "./style.css";
 import "./buttonHover.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "animate.css";
 import "./background.css";
+import "./border.css";
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
@@ -55,10 +55,6 @@ window.addEventListener("scroll", () => {
 });
 
 const languageIcon = document.querySelectorAll(".language-icon");
-
-languageIcon.forEach((icon) => {
-  icon.classList.add("img-thumbnail");
-});
 
 document.querySelectorAll(".holographic-card").forEach((el) => {
   el.addEventListener("touchstart", () => el.classList.add("hovered"));

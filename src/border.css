@@ -1,0 +1,85 @@
+.box {
+  border: 5px solid #0000;
+  border-radius: 12px;
+  background: linear-gradient(var(--angle), #070707, #687aff) border-box;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1d1f20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border.circle {
+  --borderWidth: 6px;
+  display: inline-block;
+  border-radius: 9999px;
+  /* make inner area transparent so the gradient ring shows as outer circle */
+  background: transparent;
+  /* padding sets the ring thickness */
+  padding: var(--borderWidth);
+}
+.gradient-border.circle img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+/* ensure the animated gradient becomes perfectly circular for the .circle variant */
+.gradient-border.circle:after {
+  border-radius: 50%;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
