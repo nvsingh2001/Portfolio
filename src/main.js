@@ -57,9 +57,9 @@ window.addEventListener("scroll", () => {
 
 const languageIcon = document.querySelectorAll(".language-icon");
 
-document.querySelectorAll(".holographic-card").forEach((el) => {
-  el.addEventListener("touchstart", () => el.classList.add("hovered"));
-  el.addEventListener("touchend", () => el.classList.remove("hovered"));
+document.querySelectorAll(".holographic-card").forEach((card) => {
+  card.addEventListener("touchstart", () => card.classList.add("hovered"));
+  card.addEventListener("touchend", () => card.classList.remove("hovered"));
 });
 
 document.querySelectorAll(".btn").forEach((element) => {

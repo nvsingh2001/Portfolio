@@ -49,7 +49,7 @@
     font-size: 1rem;
   }
   #profile-picture {
-    max-width: 220px;
+    max-width: auto;
   }
   .navbar .navbar-brand {
     font-size: 1rem;
